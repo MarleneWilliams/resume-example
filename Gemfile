@@ -12,7 +12,7 @@ gem "middleman-livereload", "~> 3.1.0"
 gem 'middleman-autoprefixer'
 
 # Make it easier to publish to GitHub Pages
-gem 'middleman-gh-pages'
+gem 'middleman-deploy', '~> 1.0'
 
 # for faster file watcher updates on windows:
 gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
