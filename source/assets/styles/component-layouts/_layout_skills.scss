@@ -1,0 +1,16 @@
+// Mobile
+.skill {
+	@extend %item-basics;
+}
+
+// Responsive
+.skills {
+	@extend %flex-container-small;
+
+  .section-title {
+  	width: 100%;
+  }
+  .skill {
+  	@extend %flex-item-medium;
+  }
+}

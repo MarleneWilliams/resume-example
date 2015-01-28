@@ -1,0 +1,16 @@
+.name {
+	width: 100%;
+}
+.telephone {
+	margin-bottom: 1em;
+}
+
+.basic-info {
+	@extend %flex-container-small;
+
+	address,
+	.telephone,
+	.internet {
+		@extend %flex-item-small;
+	}
+}

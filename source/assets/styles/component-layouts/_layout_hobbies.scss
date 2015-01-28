@@ -1,0 +1,8 @@
+ul.hobbies-list {
+
+	@include respond-to(35em) {
+
+    column-count: 3;
+    column-gap: 1em;
+	}
+}

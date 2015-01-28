@@ -1,0 +1,75 @@
+//
+// Media queries
+//
+
+// Respond-to
+@mixin respond-to($target, $target-print: true) {
+  @if type-of($target) == "number" {
+    @media only screen and (min-width: #{$target}) {
+      @content
+    }
+    // For IE versions less-than-9, so they can get the media query styles
+    .lt-ie9 & {
+      @content;
+    }
+  }
+  // Turn off applicaion of styles to print by adding a second argument
+  @else if $target-print != true {
+    @media #{$target} {
+      @content;
+    }
+    // For IE versions less-than-9, so they can get the media query styles
+    .lt-ie9 &{
+      @content;
+    }
+  }
+  // For breakpoints or targets defined in _variables.scss
+  @else if $target {
+    @media #{$target} {
+      @content;
+    }
+    // For IE versions less-than-9, so they can get the media query styles
+    .lt-ie9 &{
+      @content;
+    }
+  }
+}
+
+//
+// Making elements align in a grid, regardless of height
+// Apply to elements you want as grid items
+// $cols = how many columns you want
+// $margin-right = margin-right, should be in percent
+// $ie8-height = an explicit height for all the elements
+@mixin gridify($cols, $margin-right: 5%, $ie8-height: auto) {
+  $width: (100% / $cols) - $margin-right + ($margin-right / $cols);
+  $clearnum: $cols + 1;
+
+  box-sizing: border-box;
+  clear: none;
+  display: block;
+  float: left;
+  margin-right: $margin-right;
+  width: $width;
+
+  // Resetting from any previous uses of this mixin
+  &:nth-child(odd),
+  &:nth-child(even) {
+    clear: none;
+    margin-right: $margin-right;
+  }
+
+  // Clear the rows
+  &:nth-child(#{$cols}n+#{$clearnum}) {
+    clear: left;
+  }
+  // Remove margin-right from last column
+  &:nth-child(#{$cols}n+#{$cols}) {
+    margin-right: 0;
+  }
+
+  // Fix for IE8
+  .ie-8 & {
+    height: $ie8-height;
+  }
+}

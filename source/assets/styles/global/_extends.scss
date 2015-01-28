@@ -1,0 +1,125 @@
+//
+// Typography
+//
+
+%text-reset {
+	color: inherit;
+	font-style: inherit;
+	text-shadow: inherit;
+	text-transform: inherit;
+}
+
+%text-blocky {
+	color: $heading-color;
+	text-shadow: -2px 2px 1px $silver;
+	text-transform: uppercase;
+}
+
+%text-light {
+	color: $gray;
+}
+
+%text-airy {
+	color: $silver;
+	font-style: italic;
+}
+
+//
+// Decorative
+//
+
+%boxshadow-large {
+	border: 1px solid $haze;
+  box-shadow: 0px 0px 16px $haze;
+}
+
+%border-bottom-dotted {
+	border-bottom: 1px dashed $gray-light;
+}
+
+//
+// Layout
+//
+
+%section-basics {
+	clear: both;
+	margin: 0 1em;
+	padding: 0 0 2em 0;
+	> * {
+		padding: 0 8px;
+	}
+	&:last-child {
+		// padding-bottom: 0;
+	}
+}
+
+%item-basics {
+	margin-bottom: 2em;
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+%flex-container-small {
+  .section-title {
+  	width: 100%;
+  }
+	@include respond-to(35em) {
+		display: flex;
+		flex-wrap: wrap;
+	}
+}
+%flex-item-small {
+  @include respond-to(35em) {
+  	width: 33%;
+  }
+}
+%flex-item-medium {
+  @include respond-to(35em) {
+  	width: 50%;
+  }
+  @include respond-to(45em) {
+  	width: 33%;
+  }
+}
+%flex-item-large {
+  @include respond-to(35em) {
+  	width: 50%;
+  }
+  // @include respond-to(45em) {
+  // 	width: 33%;
+  // }
+}
+
+
+// Grid item layouts
+%grid-layout-fullwidth {
+  @include respond-to(10em) {
+    @include gridify(2, 0%);
+  }
+  @include respond-to(45em) {
+    @include gridify(3, 0%);
+  }
+  @include respond-to(60em) {
+    @include gridify(4, 0%);
+  }
+}
+%grid-layout-mediumwidth {
+  @include respond-to(10em) {
+    @include gridify(1, 0%);
+  }
+  @include respond-to(45em) {
+    @include gridify(2, 0%);
+  }
+  @include respond-to(60em) {
+    @include gridify(3, 0%);
+  }
+}
+%grid-layout-smallwidth {
+  @include respond-to(10em) {
+    @include gridify(1, 0%);
+  }
+  @include respond-to(60em) {
+    @include gridify(2, 0%);
+  }
+}

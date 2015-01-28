@@ -1,0 +1,11 @@
+.job {
+	@extend %item-basics;
+}
+
+// Responsive
+.history {
+	@extend %flex-container-small;
+  .job {
+  	@extend %flex-item-large;
+  }
+}

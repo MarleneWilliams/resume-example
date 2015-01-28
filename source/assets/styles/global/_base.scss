@@ -1,0 +1,48 @@
+// Body
+body {
+	color: $body-color;
+	& * {
+		box-sizing: border-box;
+	}
+}
+
+// Headings
+
+h1,h2,h3,h4,h5,h6 {
+	color: $heading-color;
+}
+
+h1,h2 {
+	@extend %border-bottom-dotted;
+	@extend %text-blocky;
+}
+
+h3,
+h4 {
+	margin-bottom: .5em;
+	margin-top: .5em;
+}
+
+// Links
+
+a {
+	&:link,
+  &:visited {
+  	color: $link-color;
+  }
+}
+
+// Other elements and reusable styles
+
+address {
+	font-style: normal;
+	margin-bottom: 1em;
+}
+
+.label {
+	@extend %text-airy;
+}
+
+.description {
+	@extend %text-light;
+}
