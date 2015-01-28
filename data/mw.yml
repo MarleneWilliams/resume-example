@@ -1,24 +1,18 @@
 name:
-  primary: First name
-  last: Last name
+  primary: Marlene
+  last: Williams
 
 contact_info:
   address:
-    street_address: Street address
-    city: City
-    state: State
-    zipcode: Zip
-  phone_label: 'p: '
-  phone: 123-456-7890
-  fax_label: 'f: '
-  fax: 098-765-4321
-  drupalorg: Drupal.org username
-  email_label: 'e: '
+    street_address: PO Box 301426
+    city: Portland
+    state: OR
+    zipcode: 97294-9426
   email: email@domain.com
-  email_href: 'mailto:email@domain.com?subject=You know you wanna hire me'
-  website_label: 'w: '
-  website: www.mywebsite.com
-  url: http://www.lullabot.com
+  phone: 123-456-7890
+  fax: 098-765-4321
+  drupalorg: Mindewen
+  url: www.mywebsite.com
 
 skills:
   section_title: Skills
@@ -34,7 +28,7 @@ skills:
 
 intro:
   section_title: Introduction
-  description: <p>Cras sed ante. Phasellus in massa. Curabitur dolor eros, gravida et, hendrerit ac, cursus non, massa. Aliquam lorem. In hac habitasse platea dictumst. Cras eu mauris. Quisque lacus. Donec ipsum. Nullam vitae sem at nunc pharetra ultricies. Vivamus elit eros, ullamcorper a, adipiscing sit amet, porttitor ut, nibh. Maecenas adipiscing mollis massa. Nunc ut dui eget nulla venenatis aliquet. Sed luctus posuere justo. Cras vehicula varius turpis. Vivamus eros metus, tristique sit amet, molestie dignissim, malesuada et, urna.</p><p>Donec gravida posuere arcu. Nulla facilisi. Phasellus imperdiet. Vestibulum at metus. Integer euismod. Nullam placerat rhoncus sapien. Ut euismod. Praesent libero. Morbi pellentesque libero sit amet ante. Maecenas tellus. Maecenas erat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+  description: <p>Donec gravida posuere arcu. Nulla facilisi. Phasellus imperdiet. Vestibulum at metus. Integer euismod. Nullam placerat rhoncus sapien. Ut euismod.</p><p>Praesent libero. Morbi pellentesque libero sit amet ante. Maecenas tellus. Maecenas erat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
 
 history:
   section_title: Employment History

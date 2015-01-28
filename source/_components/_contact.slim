@@ -1,24 +1,43 @@
-address
-  = data.defaults.contact_info.address.street_address
-  br
-  = data.defaults.contact_info.address.second_line
-  br
-  = data.defaults.contact_info.address.city + ', '
-  = data.defaults.contact_info.address.state + ' '
-  = data.defaults.contact_info.address.zipcode
+- if data.defaults.contact_info.address
+  address
+    - if data.defaults.contact_info.address.street_address
+      = data.defaults.contact_info.address.street_address
+      br
+    - if data.defaults.contact_info.address.second_line
+      = data.defaults.contact_info.address.second_line
+      br
+    - if data.defaults.contact_info.address.city
+      = data.defaults.contact_info.address.city + ', '
+    - if data.defaults.contact_info.address.state
+      = data.defaults.contact_info.address.state + ' '
+    - if data.defaults.contact_info.address.zipcode
+      = data.defaults.contact_info.address.zipcode
 
-.telephone
-  .phone
-    span.label p: 
-    = data.defaults.contact_info.phone
-  .fax
-    span.label f: 
-    = data.defaults.contact_info.fax
+- if data.defaults.contact_info.phone || data.defaults.contact_info.fax
+  .telephone
+    - if data.defaults.contact_info.phone
+      .phone
+        - if data.defaults.contact_info.phone_label
+          span.label = data.defaults.contact_info.phone_label
+        = data.defaults.contact_info.phone
+    - if data.defaults.contact_info.fax
+      .fax
+        - if data.defaults.contact_info.fax_label
+          span.label = data.defaults.contact_info.fax_label
+        = data.defaults.contact_info.fax
 
-.internet
-  .email
-    span.label e: 
-    a href="mailto:#{data.defaults.contact_info.email}?subject=You know you wanna hire me" = data.defaults.contact_info.email
-  .website
-    span.label w: 
-    a href="#{data.defaults.contact_info.url}" = data.defaults.contact_info.url
+- if data.defaults.contact_info.email || data.defaults.contact_info.website
+  .internet
+    - if data.defaults.contact_info.email
+      .email
+        - if data.defaults.contact_info.email_label
+          span.label = data.defaults.contact_info.email_label
+        - if data.defaults.contact_info.email
+          a href=data.defaults.contact_info.email_href
+            = data.defaults.contact_info.email
+    - if data.defaults.contact_info.website
+      .website
+        - if data.defaults.contact_info.website_label
+          span.label = data.defaults.contact_info.website_label
+        - if data.defaults.contact_info.website
+          a href="#{data.defaults.contact_info.url}" = data.defaults.contact_info.website

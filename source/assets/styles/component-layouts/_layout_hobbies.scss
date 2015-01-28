@@ -1,7 +1,10 @@
 ul.hobbies-list {
-
+	list-style: none;
 	@include respond-to(35em) {
-
+    column-count: 2;
+    column-gap: 1em;
+	}
+	@include respond-to(45em) {
     column-count: 3;
     column-gap: 1em;
 	}

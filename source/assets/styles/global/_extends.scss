@@ -64,18 +64,18 @@
   .section-title {
   	width: 100%;
   }
-	@include respond-to(35em) {
+	@include respond-to($tiny) {
 		display: flex;
 		flex-wrap: wrap;
 	}
 }
 %flex-item-small {
-  @include respond-to(35em) {
+  @include respond-to($tiny) {
   	width: 33%;
   }
 }
 %flex-item-medium {
-  @include respond-to(35em) {
+  @include respond-to($tiny) {
   	width: 50%;
   }
   @include respond-to(45em) {
@@ -83,43 +83,7 @@
   }
 }
 %flex-item-large {
-  @include respond-to(35em) {
+  @include respond-to($tiny) {
   	width: 50%;
-  }
-  // @include respond-to(45em) {
-  // 	width: 33%;
-  // }
-}
-
-
-// Grid item layouts
-%grid-layout-fullwidth {
-  @include respond-to(10em) {
-    @include gridify(2, 0%);
-  }
-  @include respond-to(45em) {
-    @include gridify(3, 0%);
-  }
-  @include respond-to(60em) {
-    @include gridify(4, 0%);
-  }
-}
-%grid-layout-mediumwidth {
-  @include respond-to(10em) {
-    @include gridify(1, 0%);
-  }
-  @include respond-to(45em) {
-    @include gridify(2, 0%);
-  }
-  @include respond-to(60em) {
-    @include gridify(3, 0%);
-  }
-}
-%grid-layout-smallwidth {
-  @include respond-to(10em) {
-    @include gridify(1, 0%);
-  }
-  @include respond-to(60em) {
-    @include gridify(2, 0%);
   }
 }
